@@ -3,11 +3,10 @@ package com.coderpig.wechathelper
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.orhanobut.hawk.Hawk
 import kotlinx.android.synthetic.main.activity_control.*
-
 
 /**
  * 描述：辅助服务控制页
@@ -23,6 +22,7 @@ class ControlActivity : AppCompatActivity() {
     }
 
     private fun initView() {
+
         cb_add_friends.isChecked = Hawk.get(Constant.ADD_FRIENDS,false)
         cb_friends_square.isChecked = Hawk.get(Constant.FRIEND_SQUARE,false)
 
